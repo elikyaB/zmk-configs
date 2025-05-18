@@ -10,6 +10,18 @@
 };
 
 / {
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick_tap_ms = <0>;
+      flavor = "balanced";
+      bindings = <&kp>, <&kp>;
+    };  
+  };
+  
   keymap {
     compatible = "zmk,keymap";
     default_layer { 
@@ -23,10 +35,10 @@
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                      LEFT CMD     TAB     SPC/ESC             RETURN   BACKSPACE RIGHT CMD
 //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
-    &kp V     &kp K     &kp X     &kp C     &kp SEMI           &kp SQT   &kp F     &kp Q     &kp Z     &kp J
-    &kp S     &kp T     &kp R     &kp D     &kp G              &kp B     &kp N     &kp A     &kp E     &kp I  
-    &kp W     &kp M     &kp L     &kp Y     &kp COMMA          &kp DOT   &kp H     &kp O     &kp U     &kp P   
-                        &kp LGUI  &kp TAB   &mt ESC SPACE      &kp RET   &kp BSPC  &kp RGUI   
+    &kp V         &kp K         &kp X         &kp C         &kp SEMI           &kp SQT   &kp F         &kp Q         &kp Z         &kp J
+    &hm LSHIFT S  &hm LSHIFT T  &hm LSHIFT R  &hm LSHIFT D  &kp G              &kp B     &hm RSHIFT N  &hm RSHIFT A  &hm RSHIFT E  &hm RSHIFT I  
+    &kp W         &kp M         &kp L         &kp Y         &kp COMMA          &kp DOT   &kp H         &kp O         &kp U         &kp P   
+                                &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
       >;
     };
   };
