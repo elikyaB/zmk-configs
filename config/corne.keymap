@@ -11,14 +11,29 @@
 
 / {
   behaviors {
-    hm: homerow_mods {
+    hl: homerow_mods_left {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
+      label = "HOMEROW_MODS_LEFT";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick_tap_ms = <0>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
+      require-prior-idle-ms = <125>;
+      hold-trigger-key-positions = <5,6,7,8,9,15,16,17,18,19,25,26,27,28,29,33,34,35>;
+      hold-trigger-on-release;
+    };  
+    hr: homerow_mods_right {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS_RIGHT";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick_tap_ms = <0>;
+      flavor = "balanced";
+      bindings = <&kp>, <&kp>;
+      require-prior-idle-ms = <125>;
+      hold-trigger-key-positions = <0,1,2,3,4,10,11,12,13,14,20,21,22,23,24,30,31,32>;
+      hold-trigger-on-release;
     };  
   };
   
@@ -26,19 +41,19 @@
     compatible = "zmk,keymap";
     default_layer { 
       bindings = <
-// ╭─────────────────────────────────────────────────╮         ╭─────────────────────────────────────────────────╮
-// │    V    │    K    │    X    │    C    │   ;/:   │         │   '/"   │    F    │    Q    │    Z    │    J    │
-// ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │    S    │    T    │    R    │    D    │    G    │         │    B    │    N    │    A    │    E    │    I    │
-// ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │    W    │    M    │    L    │    Y    │   ,/<   │         │   ./>   │    H    │    O    │    U    │    P    │
-// ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                      LEFT CMD     TAB     SPC/ESC             RETURN   BACKSPACE RIGHT CMD
-//                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
-    &kp V         &kp K         &kp X         &kp C         &kp SEMI           &kp SQT   &kp F         &kp Q         &kp Z         &kp J
-    &hm LSHIFT S  &hm LSHIFT T  &hm LSHIFT R  &hm LSHIFT D  &kp G              &kp B     &hm RSHIFT N  &hm RSHIFT A  &hm RSHIFT E  &hm RSHIFT I  
-    &kp W         &kp M         &kp L         &kp Y         &kp COMMA          &kp DOT   &kp H         &kp O         &kp U         &kp P   
-                                &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
+        // ╭─────────────────────────────────────────────────╮         ╭─────────────────────────────────────────────────╮
+        // │    V    │    K    │    X    │    C    │   ;/:   │         │   '/"   │    F    │    Q    │    Z    │    J    │
+        // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        // │    S    │    T    │    R    │    D    │    G    │         │    B    │    N    │    A    │    E    │    I    │
+        // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        // │    W    │    M    │    L    │    Y    │   ,/<   │         │   ./>   │    H    │    O    │    U    │    P    │
+        // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
+        //                      LEFT CMD     TAB     SPC/ESC             RETURN   BACKSPACE RIGHT CMD
+        //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
+        &kp V         &kp K         &kp X         &kp C         &kp SEMI           &kp SQT   &kp F         &kp Q         &kp Z         &kp J
+        &hl LSHIFT S  &hl LSHIFT T  &hl LSHIFT R  &hl LSHIFT D  &kp G              &kp B     &hr RSHIFT N  &hr RSHIFT A  &hr RSHIFT E  &hr RSHIFT I  
+        &kp W         &kp M         &kp L         &kp Y         &kp COMMA          &kp DOT   &kp H         &kp O         &kp U         &kp P   
+                                    &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
       >;
     };
   };
