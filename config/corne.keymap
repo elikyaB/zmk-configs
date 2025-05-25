@@ -40,25 +40,25 @@
     };
     ongr: one_grave {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <2>;
+      #binding-cells = <0>;
       bindings = <&kp 1>, <&kp GRAVE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     eipi: eight_pipe {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <2>;
+      #binding-cells = <0>;
       bindings = <&kp 8>, <&kp PIPE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     nisl: nine_slash {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <2>;
+      #binding-cells = <0>;
       bindings = <&kp 9>, <&kp BACKSLASH>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     zeti: zero_tilde {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <2>;
+      #binding-cells = <0>;
       bindings = <&kp 0>, <&kp TILDE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
