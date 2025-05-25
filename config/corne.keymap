@@ -41,10 +41,10 @@
     lt {
       tapping-term-ms = <250>;
     };
-    ongr: one_grave {
+    onun: one_under {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp N1>, <&kp GRAVE>;
+      bindings = <&kp N1>, <&kp UNDER>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     eipi: eight_pipe {
@@ -90,17 +90,17 @@
     symbol {
       bindings = <
         // ╭─────────────────────────────────────────────────╮         ╭─────────────────────────────────────────────────╮
-        // │   1/`   │   2/@   │   3/#   │   4/$   │   5/%   │         │   6/^   │   7/&   │   8/|   │   9/\   │   0/~   │
+        // │   1/_   │   2/@   │   3/#   │   4/$   │   5/%   │         │   6/^   │   7/&   │   8/|   │   9/\   │   0/~   │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
         // │    *    │    /    │    (    │    )    │   PgUp  │         │    ←    │    ↓    │    ↑    │    →    │    ?    │
         // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        // │    {    │    }    │    [    │    ]    │   PgDn  │         │    -    │    !    │    =    │    +    │    _    │
+        // │    {    │    }    │    [    │    ]    │   PgDn  │         │    -    │    !    │    =    │    +    │    `    │
         // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
         //                      LEFT CMD     TAB     SPC/ESC             RETURN   BACKSPACE RIGHT CMD
         //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
-        &ongr          &kp N2         &kp N3        &kp N4          &kp N5             &kp N6    &kp N7          &eipi         &nisl          &zeti
+        &onun          &kp N2         &kp N3        &kp N4          &kp N5             &kp N6    &kp N7          &eipi         &nisl          &zeti
         &hl LCTRL STAR &hl LALT SLASH &hl LGUI LPAR &hl LSHIFT RPAR &kp PG_UP          &kp LEFT  &hr RSHIFT DOWN &hr RGUI UP   &hr RALT RIGHT &hr LCTRL QMARK  
-        &kp LBRC       &kp RBRC       &kp LBKT      &kp RBKT        &kp PG_DN          &kp MINUS &kp EXCL        &kp EQUAL     &kp PLUS       &kp UNDER   
+        &kp LBRC       &kp RBRC       &kp LBKT      &kp RBKT        &kp PG_DN          &kp MINUS &kp EXCL        &kp EQUAL     &kp PLUS       &kp GRAVE   
                                     &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
       >;
       label = "Symbol";
