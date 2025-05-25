@@ -35,33 +35,33 @@
       hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
       hold-trigger-on-release;
     };
-    &lt {
+    lt {
       tapping-term-ms = <250>;
-    }
+    };
     ongr: one_grave {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <2>;
       bindings = <&kp 1>, <&kp GRAVE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
-    }
+    };
     eipi: eight_pipe {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <2>;
       bindings = <&kp 8>, <&kp PIPE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
-    }
+    };
     nisl: nine_slash {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <2>;
       bindings = <&kp 9>, <&kp BACKSLASH>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
-    }
+    };
     zeti: zero_tilde {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <2>;
       bindings = <&kp 0>, <&kp TILDE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
-    }
+    };
   };
   
   keymap {
