@@ -97,7 +97,7 @@
         //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
         &ongr          &kp N2         &kp N3        &kp N4          &kp N5             &kp N6    &kp N7          &eipi         &nisl          &zeti
         &hl LCTRL STAR &hl LALT SLASH &hl LGUI LPAR &hl LSHIFT RPAR &kp PG_UP          &kp LEFT  &hr RSHIFT DOWN &hr RGUI UP   &hr RALT RIGHT &hr LCTRL QMARK  
-        &kp LBRC       &kp RBRC       &kp LBRK      &kp RBRK        &kp PG_DN          &kp MINUS &kp EXCL        &kp EQUAL     &kp PLUS       &kp UNDER   
+        &kp LBRC       &kp RBRC       &kp LBKT      &kp RBKT        &kp PG_DN          &kp MINUS &kp EXCL        &kp EQUAL     &kp PLUS       &kp UNDER   
                                     &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
       >;
       label = "symbol";
