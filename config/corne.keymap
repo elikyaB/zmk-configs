@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys/36.h"
 
+#define BASE 0
+#define SYMBOL 1
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
@@ -80,9 +82,9 @@
         &kp V         &kp K         &kp X         &kp C         &kp SEMI           &kp SQT   &kp F         &kp Q         &kp Z         &kp J
         &hl LCTRL S   &hl LALT T    &hl LGUI R    &hl LSHIFT D  &kp G              &kp B     &hr RSHIFT N  &hr RGUI A    &hr RALT E    &hr LCTRL I  
         &kp W         &kp M         &kp L         &kp Y         &kp COMMA          &kp DOT   &kp H         &kp O         &kp U         &kp P   
-                                    &kp LGUI      &kp TAB       &mt ESC SPACE      &lt 2 RET &kp BSPC      &kp RGUI   
+                                    &kp LGUI      &kp TAB       &mt ESC SPACE      &lt 1 RET &kp BSPC      &kp RGUI   
       >;
-      label = "base";
+      label = "Base";
     };
     symbol {
       bindings = <
@@ -100,7 +102,7 @@
         &kp LBRC       &kp RBRC       &kp LBKT      &kp RBKT        &kp PG_DN          &kp MINUS &kp EXCL        &kp EQUAL     &kp PLUS       &kp UNDER   
                                     &kp LGUI      &kp TAB       &mt ESC SPACE      &kp RET   &kp BSPC      &kp RGUI   
       >;
-      label = "symbol";
+      label = "Symbol";
     };
   };
 };
