@@ -44,6 +44,7 @@
     mt {
       tapping-term-ms = <250>;
       quick_tap_ms = <100>;
+      require-prior-idle-ms = <150>;
     };
     onun: one_under {
       compatible = "zmk,behavior-mod-morph";
