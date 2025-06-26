@@ -67,7 +67,7 @@
     &kp V       &kp K      &kp X      &kp C        &kp SEMI           &kp SQT    &kp F        &kp Q      &kp Z      &kp J
     &hl LCTRL S &hl LALT T &hl LGUI R &hl LSHIFT D &kp G              &kp B      &hr RSHIFT N &hr RGUI A &hr RALT E &hr RCTRL I  
     &kp W       &kp M      &kp L      &kp Y        &kp COMMA          &kp DOT    &kp H        &kp O      &kp U      &kp P   
-                           &kp LGUI   &kp BSPC     &sp 1 SPACE        &kp LSHIFT &kp RET      &kp ESC   
+                           &kp LGUI   &kp RET      &sp 1 SPACE        &kp LSHIFT &kp BSPC     &kp ESC   
       >;
       label = "Base";
     };
