@@ -46,7 +46,7 @@
       quick-tap-ms = <100>;
       flavor = "tap-preferred";
       bindings = <&mo>, <&kp>;
-      require-prior-idle-ms = <200>;
+      // require-prior-idle-ms = <200>;
       retro-tap;
     };
   };
@@ -62,12 +62,12 @@
     // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
     // │    W    │    M    │    L    │    Y    │   ,/<   │         │   ./>   │    H    │    O    │    U    │    P    │
     // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
-    //                        LGUI    BACKSPACE SPC/LAYER             SHIFT    RETURN    ESCAPE
+    //                        LGUI     RETURN   SPC/LAYER            LSHIFT   BACKSPACE  ESCAPE
     //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
-    &kp V       &kp K      &kp X      &kp C        &kp SEMI           &kp SQT    &kp F        &kp Q      &kp Z      &kp J
-    &hl LCTRL S &hl LALT T &hl LGUI R &hl LSHIFT D &kp G              &kp B      &hr RSHIFT N &hr RGUI A &hr RALT E &hr RCTRL I  
-    &kp W       &kp M      &kp L      &kp Y        &kp COMMA          &kp DOT    &kp H        &kp O      &kp U      &kp P   
-                           &kp LGUI   &kp RET      &sp 1 SPACE        &kp LSHIFT &kp BSPC     &kp ESC   
+    &kp V       &kp K      &kp X      &kp C        &kp SEMI        &kp SQT    &kp F        &kp Q      &kp Z      &kp J
+    &hl LCTRL S &hl LALT T &hl LGUI R &hl LSHIFT D &kp G           &kp B      &hr RSHIFT N &hr RGUI A &hr RALT E &hr RCTRL I  
+    &kp W       &kp M      &kp L      &kp Y        &kp COMMA       &kp DOT    &kp H        &kp O      &kp U      &kp P   
+                           &kp LGUI   &kp RET      &sp 1 SPACE     &kp LSHIFT &kp BSPC     &kp ESC   
       >;
       label = "Base";
     };
@@ -78,14 +78,14 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │   - _   │   = +   │   [ {   │   ] }   │   PgUp  │         │    ←    │    ↓    │    ↑    │    →    │   / ?   │
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-// │   ` ~   │         │         │         │   PgDn  │         │         │  RGUI   │  RALT   │  RCTRL  │   \ |   │
+// │         │         │         │         │   PgDn  │         │   ` ~   │   \ |   │  RGUI   │   RALT  │  RCTRL  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//                        NONE      NONE      NONE               LSHIFT      TAB      NONE
+//                        NONE      NONE      NONE               RSHIFT      TAB      NONE
 //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
 &kp N1          &kp N2         &kp N3        &kp N4          &kp N5    &kp N6     &kp N7   &kp N8   &kp N9     &kp N0
 &hl LCTRL MINUS &hl LALT EQUAL &hl LGUI LBKT &hl LSHIFT RBKT &kp PG_UP &kp LEFT   &kp DOWN &kp UP   &kp RIGHT  &kp FSLH  
-&kp GRAVE       &none          &none         &none           &kp PG_DN &none      &kp RGUI &kp RALT &kp RCTRL  &kp BSLH   
-                               &none         &none           &none     &kp LSHIFT &kp TAB  &none   
+&none           &none          &none         &none           &kp PG_DN &kp GRAVE  &kp BSLH &kp RGUI &kp RALT   &kp RCTRL
+                               &none         &none           &none     &kp RSHIFT &kp TAB  &none   
       >;
       label = "Symbol";
     };
