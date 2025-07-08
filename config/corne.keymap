@@ -53,13 +53,13 @@
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp PAGE_UP>, <&kp HOME>;
-      mods = <(MOD_LSFT|MOD_RSFT)>
+      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     downend: page_down_end {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp PAGE_DOWN>, <&kp END>;
-      mods = <(MOD_LSFT|MOD_RSFT)>
+      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
   
