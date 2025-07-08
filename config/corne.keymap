@@ -49,6 +49,18 @@
       // require-prior-idle-ms = <200>;
       retro-tap;
     };
+    uphome: page_up_home {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp PAGE_UP>, <&kp HOME>;
+      mods = <(MOD_LSFT|MOD_RSFT)>
+    };
+    downend: page_down_end {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp PAGE_DOWN>, <&kp END>;
+      mods = <(MOD_LSFT|MOD_RSFT)>
+    };
   };
   
   keymap {
@@ -82,10 +94,10 @@
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                        NONE      NONE      NONE               RSHIFT      TAB      NONE
 //                     ╰─────────────────────────────╯         ╰─────────────────────────────╯
-&kp N1          &kp N2         &kp N3        &kp N4          &kp N5    &kp N6     &kp N7   &kp N8   &kp N9     &kp N0
-&hl LCTRL MINUS &hl LALT EQUAL &hl LGUI LBKT &hl LSHIFT RBKT &kp PG_UP &kp LEFT   &kp DOWN &kp UP   &kp RIGHT  &kp FSLH  
-&none           &none          &none         &none           &kp PG_DN &kp GRAVE  &kp BSLH &kp RGUI &kp RALT   &kp RCTRL
-                               &none         &none           &none     &kp RSHIFT &kp TAB  &none   
+&kp N1          &kp N2         &kp N3        &kp N4          &kp N5   &kp N6     &kp N7   &kp N8   &kp N9     &kp N0
+&hl LCTRL MINUS &hl LALT EQUAL &hl LGUI LBKT &hl LSHIFT RBKT &uphome  &kp LEFT   &kp DOWN &kp UP   &kp RIGHT  &kp FSLH  
+&none           &none          &none         &none           &downend &kp GRAVE  &kp BSLH &kp RGUI &kp RALT   &kp RCTRL
+                               &none         &none           &none    &kp RSHIFT &kp TAB  &none   
       >;
       label = "Symbol";
     };
