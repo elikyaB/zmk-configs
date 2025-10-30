@@ -82,7 +82,7 @@
     track: next_previous {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp C_NEXT>, <&kp C_PREVIOUS>;
+      bindings = <&kp C_FF>, <&kp C_RW>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
